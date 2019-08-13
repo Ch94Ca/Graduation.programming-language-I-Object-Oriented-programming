@@ -1,0 +1,46 @@
+1)
+
+a) Classes são estruturas que armazenam atributos e métodos que um objeto pode ter.
+    Funciona analogamente como um manual que indica quais atributos e ações podem
+    ser realizadas no objeto, por exemplo, pode se ter uma classe "Furadeira" onde
+    "Rotação", "Potencia", "Tipo de broca", seriam exemplos de atributos para essa
+    classe e seus métodos seriam responsáveis por modificar/acessar esses atributos,
+    por exemplo, "Aumentar rotação", "Diminuir rotação", "Verificar Potência", etc.
+    os métodos de uma classe acessam, modificam e executam ações relacionadas ao objeto.
+
+  Ja o Objeto, pode ser referenciado como uma instância da classe, ele vai obedecer
+    os atributos e métodos da sua classe se comportando de forma individual, voltando
+    ao exemplo da classe "Furadeira", podemos criar um objeto dessa classe chamado
+    "Furadeira de impacto" e o objeto "Furadeira simples", onde cada um dos objetos
+    vão ter seus prórpios atributos e serão utilziados de acordo com a necessidade.
+
+  De forma resumida, as classes descrevem de forma genérica, as características de
+    um objeto, que quando é criado pode ter atributos diferentes dos demais objetos
+    criados na mesma classe, sendo utilizados de acordo com a necessidade do sistema.
+
+b) O construtor é um método que atribui valores aos atributos de um objeto, pode ser
+    utilizado por exemplo, para inicializar estados, um objeto da classe "furadeira", 
+    que contem um atributo de estado que indica se o objeto está "ligado"
+    ou "desligado", ao ser inicializado o construtor deve definir em qual estado se 
+    encontra o objeto(ligado ou desligado). Também é utilizado para inicializar objetos
+    com atributos pré-definidos(cnstrutores sem parametros) ou com atributos passados
+    através de parâmetros para o construtor.
+
+c) O encapsulamento serve para definir niveis de acesso a métodos e atributos de uma
+    classe, tem como objetivo garantir integridade, confiabilidade e segurança aos
+    dados, sem o encapsulamento todos os atributos e métodos de uma classe seriam
+    públicos, podendo ser facilmente acessados/modificados de forma indiscriminada, 
+    o que poderia causar sérios problemas dependendo do sistema que está sendo implementado, 
+    como por exemplo um sistema de aplicação automatica de alguma droga em uma pessoa,
+    onde temos uma classe responsável pela aplicação do medicamento, sendo "quantidade"
+    um dos atributos dessa classe, responsável por indicar a quantidade da droga
+    a ser ministrada, se esse atributo não estiver protegido pelo encapsulamento
+    o seu valor pode ser atribuido de forma indiscriminada, porém ao colocar o mesmo
+    no modo private, apenas os métodos daquela classe poderão fazer atribuiçõẽs
+    nos valores, assim, a quantidade de medicamento pode ser atribuida por métodos
+    que irão verificar por exemplo as condições do paciente, receituário e restrições
+    para que a quantidade correta seja ministrada de acordo com a situação.
+    Assim como também o exemplo dado em sala de aula, onde um sistema bancário
+    não deve deixar por exemplo o atributo "saldo" público, dessa forma poderia ser 
+    atribuido qualquer valor ao saldo de uma conta, sem passar por um procedimento
+    de transferência ou depósito.
