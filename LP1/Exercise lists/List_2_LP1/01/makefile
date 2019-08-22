@@ -7,3 +7,5 @@ exe: $(obj)
 	$(CXX) -g -o $@ $^ $(CXXFLAGS)
 clean:
 	rm -rf *o exe
+	rm -rf a.out
+	rm -rf src/*.o

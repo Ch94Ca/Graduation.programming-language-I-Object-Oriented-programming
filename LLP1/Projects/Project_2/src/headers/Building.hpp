@@ -8,30 +8,63 @@
 #ifndef BUILDING_HPP
 #define BUILDING_HPP
 
-#include <iostream>
+
 #include "Adress.hpp"
 
-class Building{
+#include <iostream>
+#include <boost/serialization/vector.hpp>
 
-private:
+class Building {
 
-std::string title;
-Adress adress;
-int building_type;
+protected:
+
+// serialize code
+
+friend class boost::serialization::access;
+
+template<class Archive>
+
+void serialize(Archive & ar, const unsigned int version)
+{
+        ar & ad_title;
+        ar & ad_type;
+        ar & building_type;
+        ar & building_price;
+        ar & building_adress;
+
+}     // end serialize
+
+// end of serialize code
+
+std::string ad_title;
 int ad_type;
-double price;
+int building_type;
+double building_price;
+Adress building_adress;
 
 public:
 
-void setAdress(std::string street, std::string number, std::string neighborhood, std::string city, std::string zip_code);
-void setBuildingType(int building_type);
-void setAdType(int ad_type);
-void setPrice(double price);
+virtual ~Building();
 
-Adress getAdress();
-int getBuildingType();
-int getAdType();
-double getPrice();
+void set_ad_title(std::string ad_title);
+void set_ad_type(int ad_type);
+void set_building_type(int building_type);
+void set_building_price(double building_price);
+void set_building_adress(Adress building_adress);
+
+std::string get_ad_title();
+int get_ad_type();
+int get_building_type();
+double get_building_price();
+Adress get_building_adress();
+Adress& get_building_adress_ref();
+
+std::string get_building_type_string();
+std::string get_ad_type_string();
+
+std::string get_building_short_string();
+virtual std::string get_building_string() = 0;
+
 
 }; // end Building
 

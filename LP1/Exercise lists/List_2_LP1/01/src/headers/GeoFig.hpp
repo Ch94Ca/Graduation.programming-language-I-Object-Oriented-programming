@@ -5,17 +5,22 @@
  *
  */
 
-#ifndef ICONTA_HPP
-#define ICONTA_HPP
+#ifndef GEOFIG_HPP
+#define GEOFIG_HPP
 
-class IConta
+#include <iostream>
+
+class GeoFig
 {
+
+protected:
+
+std::string name;
 
 public:
 
-virtual void sacar(double valor) = 0;
-virtual void depositar(double valor) = 0;
+virtual double get_area() = 0;
 
-}; // end IConta
+}; // end GeoFig
 
 #endif
