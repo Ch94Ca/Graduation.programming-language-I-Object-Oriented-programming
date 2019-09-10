@@ -1,0 +1,20 @@
+1) O que é polimorfismo?
+
+Polimorfismo é a 'capacidade' de um método "tomar várias formas",
+um mesmo método pode ser sobrescrito em cada classe para executar
+ações diferentes de acordo com o objeto que o chamou. Por exemplo,
+uma classe "Animal", que contém  um método "Fazer Ruido" sendo este
+um método polimórfico, e as  classes "Cachorro" e "Gato" herdando da
+classe "Animal", o método "Fazer Ruido" é sobrescrito em cada classe
+de forma que faça sentido em cada uma, ao chamar o método a partir a
+classe cachorro, o resultado será "Au au", chamando o mesmo a partir
+da classe gato, será "Miau", facilitando o trabalho do programador
+pois sem essa funcionalidade no lugar de um único método "fazer ruido"
+seria necessário criar um método "latir" para o cão, "miar" para o gato
+e um método específico para cada animal no sistema.
+Também podem existir listas polimórficas, em um sistema que gerencie
+vários animais, pode ser criada uma lista do tipo "animais *" sendo
+essa lista capaz de armazenar ponteiros para objetos que herdam da
+classe "Animal", em uma mesma lista podemos ter objetos do tipo Cachorro,
+Gato, e qualquer outro objeto que herde de "Animal", sendo assim mais
+eficiente do que criar uma lista para cada tipo de animal.
